@@ -9,6 +9,6 @@ for _ in range(t):
         pnums.append(sys.stdin.readline().strip())
     pnums.sort()
     for i in range(n-1):
-        if pnums[i] in pnums[i+1]:
+        if pnums[i+1].startswith(pnums[i]):
             consistency = False
     print('YES' if consistency else 'NO')
